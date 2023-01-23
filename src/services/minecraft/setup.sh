@@ -12,4 +12,3 @@ done
 mkdir ./minecraft-data/scripts
 cp -r ./scripts/* ./minecraft-data/scripts
 docker exec $container bash /data/scripts/init.sh
-docker exec $container bash /data/scripts/optimize.sh

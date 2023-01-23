@@ -1,5 +1,7 @@
 #!/bin/bash
 
-for f in ./init/*.sh; do
+path="$(pwd)/$(dirname -- "$0")"
+
+for f in "$path/init/*.sh"; do
     /bin/bash $f
 done
