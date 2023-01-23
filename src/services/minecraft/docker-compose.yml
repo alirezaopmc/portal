@@ -7,14 +7,14 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
-      VERSION: "latest:${VERSION}"
-      TYPE: "PAPER:${TYPE}"
-      FORCE_REDOWNLOAD: "FALSE:${FORCE_REDOWNLOAD}"
-      MEMORY: 1:${MEMORY}
-      EXEC_DIRECTLY: "true:${EXEC_DIRECTLY}"
-      STOP_SERVER_ANNOUNCE_DELAY: "5:${STOP_SERVER_ANNOUNCE_DELAY}"
+      VERSION: "${VERSION:-latest}"
+      TYPE: "${TYPE:-PAPER}"
+      FORCE_REDOWNLOAD: "${FORCE_REDOWNLOAD:-FALSE}"
+      MEMORY: ${MEMORY:-1}
+      EXEC_DIRECTLY: "${EXEC_DIRECTLY:-true}"
+      STOP_SERVER_ANNOUNCE_DELAY: "${STOP_SERVER_ANNOUNCE_DELAY:-5}"
       TZ: "Asia/Tehran:${TZ}"
-      GUI: "false:${GUI}"
+      GUI: "${GUI:-false}"
     tty: true
     stdin_open: true
     restart: unless-stopped
