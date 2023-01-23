@@ -24,3 +24,7 @@ adduser_j() {
     usermod -aG sudo j
     usermod -aG docker j
 }
+
+dsb_root_lgn
+install_docker
+adduser_j
