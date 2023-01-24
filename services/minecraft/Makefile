@@ -13,3 +13,6 @@ setup:
 
 rcon:
 	@docker exec $container rcon-cli $#
+
+bash:
+	@
