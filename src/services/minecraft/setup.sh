@@ -7,7 +7,7 @@ is_running_cmd="docker container inspect "$container" -f '{{.State.Health.Status
 
 until [ $(eval $is_running_cmd) == *"healthy"* ]
 do
-    sleep 1
+    sleep 5
 done
 
 path="$(pwd)/$(dirname -- "$0")"
