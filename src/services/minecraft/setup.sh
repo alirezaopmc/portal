@@ -6,7 +6,7 @@ is_running_cmd="docker container inspect "$container" -f '{{.State.Status}}'"
 
 echo $is_running_cmd
 
-until [ -z $(eval $is_running_cmd) ]
+until [ $(eval $is_running_cmd) == "running" ]
 do
     sleep 1
 done
