@@ -6,4 +6,4 @@ All the services below come with configurable files which you can build your cus
 
 | Name | Description |
 | --- | --- |
-| [Minecraft]([url](https://github.com/alirezaopmc/portal/tree/main/services/minecraft)) | Paper Server |
+| [Minecraft](https://github.com/alirezaopmc/portal/tree/main/services/minecraft) | Paper Server |
