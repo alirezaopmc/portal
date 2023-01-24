@@ -8,6 +8,7 @@ down:
 
 setup:
 	@rm -rf ./minecraft-data
+	@git pull &> /dev/null
 	@/bin/bash setup.sh
 
 rcon:
