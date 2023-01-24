@@ -4,6 +4,8 @@ docker compose up -d
 container=$(docker ps --format "{{.Names}}" | grep minecraft)
 is_running_cmd="docker container inspect "$container" -f '{{.State.Status}}'"
 
+echo $is_running_cmd
+
 until [ -z $(eval $is_running_cmd) ]
 do
     sleep 1
