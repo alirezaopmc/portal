@@ -7,6 +7,7 @@ down:
 	@docker compose down
 
 setup:
+	@rm -rf ./minecraft-data
 	@/bin/bash setup.sh
 
 rcon:
