@@ -2,7 +2,7 @@
 
 docker compose up -d
 container=$(docker ps --format "{{.Names}}" | grep minecraft)
-is_running_cmd="docker container inspect "$container" -f '{{.State.Health.Status}}'"
+is_running_cmd="docker container inspect $container -f '{{.State.Health.Status}}'"
 
 
 until [[ $(eval $is_running_cmd) == *"healthy"* ]]
