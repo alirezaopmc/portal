@@ -11,7 +11,7 @@ do
     sleep 1
 done
 
-path="$(pwd)/$(dirname --"$0")"
+path="$(pwd)/$(dirname -- "$0")"
 
 mkdir "$path/minecraft-data/scripts"
 cp -r "$path/scripts/*" "$path/minecraft-data/scripts"
